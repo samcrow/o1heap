@@ -113,6 +113,9 @@ impl Heap {
     }
 }
 
+/// A heap may be sent between threads
+unsafe impl Send for Heap {}
+
 /// Information about the status of the heap
 pub struct Diagnostics {
     inner: o1heap::O1HeapDiagnostics,

@@ -45,7 +45,7 @@ impl CortexMHeap {
     /// The memory in the range `[start_addr, start_addr + size)` must not be used for anything
     /// else during the lifetime of this heap.
     ///
-    pub unsafe fn init(&mut self, start_addr: usize, size: usize) -> Result<(), InitError> {
+    pub unsafe fn init(&self, start_addr: usize, size: usize) -> Result<(), InitError> {
         interrupt::free(|cs| self.heap.borrow(cs).borrow_mut().init(start_addr, size))
     }
 

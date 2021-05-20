@@ -1,0 +1,15 @@
+[package]
+name = "o1heap_cortex_m"
+version = "0.1.0"
+authors = ["Sam Crow <scrow@eng.ucsd.edu>"]
+edition = "2018"
+description = "Cortex-M global allocator wrapping o1heap: a constant-complexity deterministic memory allocator (heap) for hard real-time high-integrity embedded systems"
+repository = "https://github.com/samcrow/o1heap"
+license = "MIT"
+categories = ["embedded", "memory-management"]
+
+[dependencies]
+cortex-m = "0.7.2"
+
+[dependencies.o1heap]
+path = ".."

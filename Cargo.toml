@@ -1,0 +1,17 @@
+[package]
+name = "o1heap"
+version = "0.1.0"
+edition = "2018"
+authors = ["Sam Crow <scrow@eng.ucsd.edu>"]
+description = "Constant-complexity deterministic memory allocator (heap) for hard real-time high-integrity embedded systems"
+repository = "https://github.com/samcrow/o1heap"
+license = "MIT"
+categories = ["embedded", "memory-management"]
+
+[dependencies]
+
+[dev-dependencies]
+rand = "0.8.3"
+
+[workspace]
+members = ["o1heap_cortex_m"]
